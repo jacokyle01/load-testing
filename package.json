@@ -1,5 +1,14 @@
 {
+  "scripts": {
+    "load-test:setup": "bash load-testing/scripts/setup-tests.sh",
+    "load-test:baseline": "node load-testing/autocannon/baseline-test.js",
+    "load-test:progressive": "node load-testing/autocannon/load-test-progressive.js",
+    "load-test:endpoints": "node load-testing/autocannon/test-endpoints.js",
+    "load-test:all": "bash load-testing/scripts/run-all-tests.sh",
+    "load-test:analyze": "node load-testing/scripts/analyze-results.js"
+  },
   "devDependencies": {
-    "autocannon": "^8.0.0"
+    "autocannon": "^8.0.0",
+    "concurrently": "^7.6.0"
   }
 }

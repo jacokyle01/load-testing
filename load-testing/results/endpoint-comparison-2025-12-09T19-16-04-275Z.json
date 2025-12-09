@@ -1,0 +1,94 @@
+[
+  {
+    "endpoint": "Tags (Simple Query)",
+    "description": "Simple endpoint with no auth, basic query",
+    "method": "GET",
+    "path": "/api/tags",
+    "requiresAuth": false,
+    "config": {
+      "connections": 50,
+      "duration": 60
+    },
+    "metrics": {
+      "totalRequests": 319647,
+      "requestsPerSecond": 5328,
+      "latencyMean": 8.88,
+      "latencyP50": 8,
+      "latencyP99": 19,
+      "latencyMax": 51,
+      "throughputMean": 1587575.47,
+      "errors": 0,
+      "non2xx": 0,
+      "timeouts": 0
+    }
+  },
+  {
+    "endpoint": "User Registration",
+    "description": "CPU-intensive (bcrypt hashing)",
+    "method": "POST",
+    "path": "/api/users",
+    "requiresAuth": false,
+    "config": {
+      "connections": 50,
+      "duration": 60
+    },
+    "metrics": {
+      "totalRequests": 152320,
+      "requestsPerSecond": 2539.25,
+      "latencyMean": 19.19,
+      "latencyP50": 18,
+      "latencyP99": 31,
+      "latencyMax": 1336,
+      "throughputMean": 878658.14,
+      "errors": 0,
+      "non2xx": 152270,
+      "timeouts": 0
+    }
+  },
+  {
+    "endpoint": "Articles List",
+    "description": "Complex query with pagination",
+    "method": "GET",
+    "path": "/api/articles?limit=20",
+    "requiresAuth": false,
+    "config": {
+      "connections": 50,
+      "duration": 60
+    },
+    "metrics": {
+      "totalRequests": 1850,
+      "requestsPerSecond": 30.84,
+      "latencyMean": 1600.88,
+      "latencyP50": 1600,
+      "latencyP99": 1850,
+      "latencyMax": 1885,
+      "throughputMean": 497110.67,
+      "errors": 0,
+      "non2xx": 0,
+      "timeouts": 0
+    }
+  },
+  {
+    "endpoint": "Articles Feed (Auth)",
+    "description": "Personalized feed, requires auth",
+    "method": "GET",
+    "path": "/api/articles/feed?limit=20",
+    "requiresAuth": true,
+    "config": {
+      "connections": 50,
+      "duration": 60
+    },
+    "metrics": {
+      "totalRequests": 36111,
+      "requestsPerSecond": 601.85,
+      "latencyMean": 82.49,
+      "latencyP50": 78,
+      "latencyP99": 126,
+      "latencyMax": 242,
+      "throughputMean": 180563.2,
+      "errors": 0,
+      "non2xx": 0,
+      "timeouts": 0
+    }
+  }
+]
